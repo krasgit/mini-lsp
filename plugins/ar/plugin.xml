@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="urn:mini:maven:plugin" name="ar" provides="archive">
-  <implementation class="mini.maven.plugins.ArPlugin"/>
-  <tools>
-    <tool name="ar" path="ar" versionArg="--version"/>
-  </tools>
-  <cache scope="tool-and-flags"/>
-</plugin>

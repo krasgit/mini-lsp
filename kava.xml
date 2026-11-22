@@ -10,18 +10,13 @@
     <module name="lsp-server" path="lsp-server"/>
   </modules>
   <plugins>
-    <plugin id="javac" path="plugins/javac"/>
-    <plugin id="kavac" path="plugins/kavac"/>
-    <plugin id="gcc" path="plugins/gcc"/>
-    <plugin id="ar" path="plugins/ar"/>
-    <plugin id="jar" path="plugins/jar"/>
-    <plugin id="junit" path="plugins/junit"/>
+    <plugin id="javac"/>
+    <plugin id="jar"/>
+    <plugin id="junit"/>
   </plugins>
   <bindings>
     <binding module="lsp-server" sources="java" plugin="javac"/>
     <binding artifact="jar" plugin="jar"/>
-    <binding artifact="archive" plugin="ar"/>
-    <binding artifact="shared" plugin="gcc"/>
   </bindings>
   <goals>
     <goal name="build" default="true"/>
