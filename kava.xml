@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="urn:mini:maven:kava" format="1">
+  <name>mini-lsp</name>
+  <version>2.0.0</version>
+  <platforms>
+    <platform id="x86_64-linux-gnu" arch="x86_64" os="linux"/>
+    <platform id="aarch64-linux-gnu" arch="aarch64" os="linux"/>
+  </platforms>
+  <modules>
+    <module name="lsp-server" path="lsp-server"/>
+  </modules>
+  <plugins>
+    <plugin id="javac" path="plugins/javac"/>
+    <plugin id="kavac" path="plugins/kavac"/>
+    <plugin id="gcc" path="plugins/gcc"/>
+    <plugin id="ar" path="plugins/ar"/>
+    <plugin id="jar" path="plugins/jar"/>
+    <plugin id="junit" path="plugins/junit"/>
+  </plugins>
+  <bindings>
+    <binding module="lsp-server" sources="java" plugin="javac"/>
+    <binding artifact="jar" plugin="jar"/>
+    <binding artifact="archive" plugin="ar"/>
+    <binding artifact="shared" plugin="gcc"/>
+  </bindings>
+  <goals>
+    <goal name="build" default="true"/>
+    <goal name="test" plugin="junit" suite="smoke" default="false"/>
+  </goals>
+</project>

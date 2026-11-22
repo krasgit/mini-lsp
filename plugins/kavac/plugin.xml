@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="urn:mini:maven:plugin" name="kavac" provides="java-compile">
+  <implementation class="mini.maven.plugins.KavacPlugin"/>
+  <tools>
+    <tool name="java" path="${java.home}/bin/java" versionArg="-version"/>
+  </tools>
+  <settings>
+    <setting name="mainClass" value="mini.MiniCompiler"/>
+    <setting name="emit" value="lib"/>
+  </settings>
+  <cache scope="module-sources"/>
+</plugin>
